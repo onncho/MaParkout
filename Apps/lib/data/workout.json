@@ -1,0 +1,10 @@
+{
+  "workoutId": 1,
+  "workoutName": 2,
+  "workoutType": "TRX",
+  "workoutCoach": "Meital",
+  "workoutIcon": "icon.svg",
+  "workoutIsOnline": false,
+  "workoutLocation": "some address",
+  "workoutDurationTime": 1.5
+}
