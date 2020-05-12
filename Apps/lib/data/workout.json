@@ -1,10 +1,19 @@
 {
-  "workoutId": 1,
-  "workoutName": 2,
-  "workoutType": "TRX",
-  "workoutCoach": "Meital",
-  "workoutIcon": "icon.svg",
-  "workoutIsOnline": false,
-  "workoutLocation": "some address",
-  "workoutDurationTime": 1.5
+  "data": [{
+    "workoutId": 1,
+    "workoutName": "First",
+    "workoutCoach": "Meital",
+    "workoutIcon": "icon.svg",
+    "workoutIsOnline": false,
+    "workoutLocation": "some address",
+    "workoutDurationTime": 1.5
+  }, {
+    "workoutId": 2,
+    "workoutName": "Second",
+    "workoutCoach": "Alon",
+    "workoutIcon": "icon.svg",
+    "workoutIsOnline": false,
+    "workoutLocation": "some address",
+    "workoutDurationTime": 1.5
+  }]
 }
