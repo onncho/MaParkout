@@ -1,5 +1,5 @@
 {
-  "data": [{
+  "workouts": [{
     "workoutId": 1,
     "workoutName": "First",
     "workoutCoach": "Meital",
