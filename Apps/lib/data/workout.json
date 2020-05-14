@@ -9,7 +9,7 @@
     "workoutDurationTime": 1.5,
     "workoutTime": "19:00",
     "workoutColor": "light green",
-    "CoachImaage": "https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/988947_10155827862422355_8171722055426592874_n.jpg?_nc_cat=109&_nc_sid=85a577&_nc_oc=AQlbN-DjYF_LaN7_7UVbIQY3g5xAWmD6OA_X7MXHits-B_aqKPQ5BMZsqEdxLlovDZg&_nc_ht=scontent.ftlv5-1.fna&oh=62f83965443e35e7247add932ac4d156&oe=5EE2A856"
+    "coachImage": "https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/988947_10155827862422355_8171722055426592874_n.jpg?_nc_cat=109&_nc_sid=85a577&_nc_oc=AQlbN-DjYF_LaN7_7UVbIQY3g5xAWmD6OA_X7MXHits-B_aqKPQ5BMZsqEdxLlovDZg&_nc_ht=scontent.ftlv5-1.fna&oh=62f83965443e35e7247add932ac4d156&oe=5EE2A856"
   }, {
     "workoutId": 2,
     "workoutName": "Monday Yoga",
@@ -20,7 +20,7 @@
     "workoutDurationTime": 1.5,
     "workoutTime": "09:30",
     "workoutColor": "light blue",
-    "CoachImaage": "https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/988947_10155827862422355_8171722055426592874_n.jpg?_nc_cat=109&_nc_sid=85a577&_nc_oc=AQlbN-DjYF_LaN7_7UVbIQY3g5xAWmD6OA_X7MXHits-B_aqKPQ5BMZsqEdxLlovDZg&_nc_ht=scontent.ftlv5-1.fna&oh=62f83965443e35e7247add932ac4d156&oe=5EE2A856"
+    "coachImage": "https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/988947_10155827862422355_8171722055426592874_n.jpg?_nc_cat=109&_nc_sid=85a577&_nc_oc=AQlbN-DjYF_LaN7_7UVbIQY3g5xAWmD6OA_X7MXHits-B_aqKPQ5BMZsqEdxLlovDZg&_nc_ht=scontent.ftlv5-1.fna&oh=62f83965443e35e7247add932ac4d156&oe=5EE2A856"
   }, {
     "workoutId": 3,
     "workoutName": "Core",
@@ -31,7 +31,7 @@
     "workoutDurationTime": 1.5,
     "workoutTime": "09:00",
     "workoutColor": "light blue",
-    "CoachImage": "https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/13091922_10154116414334844_4076140640560088331_n.jpg?_nc_cat=111&_nc_sid=85a577&_nc_oc=AQkyyuXmKjDP_2yNb9z9-GTpdiTD_FpOXUHl856BaFAousBWgWfOM_YiuNoWYp5JiRE&_nc_ht=scontent.ftlv5-1.fna&oh=2825fe26d63e98faa8890bc1c3c4b8c4&oe=5EE3072C"
+    "coachImage": "https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/13091922_10154116414334844_4076140640560088331_n.jpg?_nc_cat=111&_nc_sid=85a577&_nc_oc=AQkyyuXmKjDP_2yNb9z9-GTpdiTD_FpOXUHl856BaFAousBWgWfOM_YiuNoWYp5JiRE&_nc_ht=scontent.ftlv5-1.fna&oh=2825fe26d63e98faa8890bc1c3c4b8c4&oe=5EE3072C"
   }, {
     "workoutId": 4,
     "workoutName": "Pump",
@@ -42,7 +42,7 @@
     "workoutDurationTime": 1.5,
     "workoutTime": "19:00",
     "workoutColor": "light green",
-    "CoachImage": "https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/988947_10155827862422355_8171722055426592874_n.jpg?_nc_cat=109&_nc_sid=85a577&_nc_oc=AQlbN-DjYF_LaN7_7UVbIQY3g5xAWmD6OA_X7MXHits-B_aqKPQ5BMZsqEdxLlovDZg&_nc_ht=scontent.ftlv5-1.fna&oh=62f83965443e35e7247add932ac4d156&oe=5EE2A856"
+    "coachImage": "https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/988947_10155827862422355_8171722055426592874_n.jpg?_nc_cat=109&_nc_sid=85a577&_nc_oc=AQlbN-DjYF_LaN7_7UVbIQY3g5xAWmD6OA_X7MXHits-B_aqKPQ5BMZsqEdxLlovDZg&_nc_ht=scontent.ftlv5-1.fna&oh=62f83965443e35e7247add932ac4d156&oe=5EE2A856"
   }, {
     "workoutId": 5,
     "workoutName": "ריצה",
@@ -53,7 +53,7 @@
     "workoutDurationTime": 1.5,
     "workoutTime": "20:10",
     "workoutColor": "light yellow",
-    "CoachImage": "https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/988947_10155827862422355_8171722055426592874_n.jpg?_nc_cat=109&_nc_sid=85a577&_nc_oc=AQlbN-DjYF_LaN7_7UVbIQY3g5xAWmD6OA_X7MXHits-B_aqKPQ5BMZsqEdxLlovDZg&_nc_ht=scontent.ftlv5-1.fna&oh=62f83965443e35e7247add932ac4d156&oe=5EE2A856"
+    "coachImage": "https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/988947_10155827862422355_8171722055426592874_n.jpg?_nc_cat=109&_nc_sid=85a577&_nc_oc=AQlbN-DjYF_LaN7_7UVbIQY3g5xAWmD6OA_X7MXHits-B_aqKPQ5BMZsqEdxLlovDZg&_nc_ht=scontent.ftlv5-1.fna&oh=62f83965443e35e7247add932ac4d156&oe=5EE2A856"
   }, {
     "workoutId": 6,
     "workoutName": "פונקציונלי",
@@ -64,7 +64,7 @@
     "workoutDurationTime": 1.5,
     "workoutTime": "20:30",
     "workoutColor": "light blue",
-    "CoachImage": "https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/13091922_10154116414334844_4076140640560088331_n.jpg?_nc_cat=111&_nc_sid=85a577&_nc_oc=AQkyyuXmKjDP_2yNb9z9-GTpdiTD_FpOXUHl856BaFAousBWgWfOM_YiuNoWYp5JiRE&_nc_ht=scontent.ftlv5-1.fna&oh=2825fe26d63e98faa8890bc1c3c4b8c4&oe=5EE3072C"
+    "coachImage": "https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/13091922_10154116414334844_4076140640560088331_n.jpg?_nc_cat=111&_nc_sid=85a577&_nc_oc=AQkyyuXmKjDP_2yNb9z9-GTpdiTD_FpOXUHl856BaFAousBWgWfOM_YiuNoWYp5JiRE&_nc_ht=scontent.ftlv5-1.fna&oh=2825fe26d63e98faa8890bc1c3c4b8c4&oe=5EE3072C"
   }, {
     "workoutId": 7,
     "workoutName": "TRX & Band",
@@ -75,7 +75,7 @@
     "workoutDurationTime": 1.5,
     "workoutTime": "20:00",
     "workoutColor": "light green",
-    "CoachImage": "https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/13091922_10154116414334844_4076140640560088331_n.jpg?_nc_cat=111&_nc_sid=85a577&_nc_oc=AQkyyuXmKjDP_2yNb9z9-GTpdiTD_FpOXUHl856BaFAousBWgWfOM_YiuNoWYp5JiRE&_nc_ht=scontent.ftlv5-1.fna&oh=2825fe26d63e98faa8890bc1c3c4b8c4&oe=5EE3072C"
+    "coachImage": "https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/13091922_10154116414334844_4076140640560088331_n.jpg?_nc_cat=111&_nc_sid=85a577&_nc_oc=AQkyyuXmKjDP_2yNb9z9-GTpdiTD_FpOXUHl856BaFAousBWgWfOM_YiuNoWYp5JiRE&_nc_ht=scontent.ftlv5-1.fna&oh=2825fe26d63e98faa8890bc1c3c4b8c4&oe=5EE3072C"
   }, {
     "workoutId": 8,
     "workoutName": "מחזורי",
@@ -86,7 +86,7 @@
     "workoutDurationTime": 1.5,
     "workoutTime": "19:30",
     "workoutColor": "light green",
-    "CoachImage": "https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/13091922_10154116414334844_4076140640560088331_n.jpg?_nc_cat=111&_nc_sid=85a577&_nc_oc=AQkyyuXmKjDP_2yNb9z9-GTpdiTD_FpOXUHl856BaFAousBWgWfOM_YiuNoWYp5JiRE&_nc_ht=scontent.ftlv5-1.fna&oh=2825fe26d63e98faa8890bc1c3c4b8c4&oe=5EE3072C"
+    "coachImage": "https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/13091922_10154116414334844_4076140640560088331_n.jpg?_nc_cat=111&_nc_sid=85a577&_nc_oc=AQkyyuXmKjDP_2yNb9z9-GTpdiTD_FpOXUHl856BaFAousBWgWfOM_YiuNoWYp5JiRE&_nc_ht=scontent.ftlv5-1.fna&oh=2825fe26d63e98faa8890bc1c3c4b8c4&oe=5EE3072C"
   }, {
     "workoutId": 9,
     "workoutName": "HITT",
@@ -97,6 +97,6 @@
     "workoutDurationTime": 1.5,
     "workoutTime": "20:30",
     "workoutColor": "light blue",
-    "CoachImage": "https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/988947_10155827862422355_8171722055426592874_n.jpg?_nc_cat=109&_nc_sid=85a577&_nc_oc=AQlbN-DjYF_LaN7_7UVbIQY3g5xAWmD6OA_X7MXHits-B_aqKPQ5BMZsqEdxLlovDZg&_nc_ht=scontent.ftlv5-1.fna&oh=62f83965443e35e7247add932ac4d156&oe=5EE2A856"
+    "coachImage": "https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/988947_10155827862422355_8171722055426592874_n.jpg?_nc_cat=109&_nc_sid=85a577&_nc_oc=AQlbN-DjYF_LaN7_7UVbIQY3g5xAWmD6OA_X7MXHits-B_aqKPQ5BMZsqEdxLlovDZg&_nc_ht=scontent.ftlv5-1.fna&oh=62f83965443e35e7247add932ac4d156&oe=5EE2A856"
   }]
 }

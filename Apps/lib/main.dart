@@ -85,9 +85,13 @@ class WorkoutAppState extends State<WorkoutApp> {
                           child: ListView.builder(
                               itemCount: snapshot.data.length,
                               itemBuilder: (BuildContext context, int index) {
+                                var workout = snapshot.data[index];
                                 return ListTile(
-                                    title:
-                                        Text(snapshot.data[index].workoutName));
+                                    leading: CircleAvatar(
+                                      backgroundImage:
+                                          NetworkImage(workout.coachImage),
+                                    ),
+                                    title: Text(workout.workoutName));
                               })));
                 } else if (snapshot.hasError) {
                   return Text("${snapshot.error}");
