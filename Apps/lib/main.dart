@@ -2,9 +2,9 @@ import 'dart:convert';
 import 'package:MaParkOut/data/WorkoutDetails.dart';
 import 'package:MaParkOut/data/WorkoutState.dart';
 import 'package:MaParkOut/data/workout.dart';
+import 'package:MaParkOut/widgets/SimpleSplashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:splashscreen/splashscreen.dart';
 import 'package:MaParkOut/data/MyStateScheduler.dart';
 import 'package:http/http.dart' as http;
 import 'dart:async';
@@ -50,16 +50,6 @@ class WorkoutAppState extends State<WorkoutApp> {
     return workouts;
   }
 
-  // @override
-  // void initState() {
-  //   fetchWorkouts().then((value) {
-  //     setState(() {
-  //       _allWorkouts.addAll(value);
-  //     });
-  //   });
-  //   super.initState();
-  // }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -81,33 +71,7 @@ class WorkoutAppState extends State<WorkoutApp> {
                       appBar: new AppBar(
                           title: new Text("MA Parkout"),
                           automaticallyImplyLeading: false),
-                      body: new Center(
-                          child: ListView.builder(
-                              itemCount: snapshot.data.length,
-                              itemBuilder: (BuildContext context, int index) {
-                                var workout = snapshot.data[index];
-                                var iconOnlineColor = workout.workoutIsOnline
-                                    ? Colors.green[500]
-                                    : Colors.grey[200];
-
-                                return ListTile(
-                                  leading: CircleAvatar(
-                                    backgroundImage:
-                                        NetworkImage(workout.coachImage),
-                                  ),
-                                  title: Text(workout.workoutName),
-                                  subtitle: Text(workout.workoutTime),
-                                  trailing: Icon(Icons.movie_creation,
-                                      color: iconOnlineColor),
-                                  onTap: () {
-                                    Navigator.push(
-                                        context,
-                                        new MaterialPageRoute(
-                                            builder: (context) =>
-                                                WorkoutDetails(workout)));
-                                  },
-                                );
-                              })));
+                      body: new Center(child: darwFirstList(snapshot)));
                 } else if (snapshot.hasError) {
                   return Text("${snapshot.error}");
                 }
@@ -116,69 +80,30 @@ class WorkoutAppState extends State<WorkoutApp> {
                 return SimpleSplashScreen(_logo);
               }),
         ));
-
-    //   new SplashScreen(
-    //       seconds: 6,
-    //       navigateAfterSeconds: new AfterSplash(),
-    //       title: new Text(
-    //         'Welcome In SplashScreen',
-    //         style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
-    //       ),
-    //       image: Image.asset('assets/ ma_repo/logo_on_white.jpeg'),
-    //       backgroundColor: Colors.white,
-    //       styleTextUnderTheLoader: new TextStyle(),
-    //       photoSize: 100.0,
-    //       onClick: () => print("user clicked"),
-    //       loaderColor: Colors.black),
-    // );
   }
-}
 
-class SimpleSplashScreen extends StatelessWidget {
-  final String _imageUrl;
+  ListView darwFirstList(AsyncSnapshot snapshot) {
+    return ListView.builder(
+        itemCount: snapshot.data.length,
+        itemBuilder: (BuildContext context, int index) {
+          var workout = snapshot.data[index];
+          var iconOnlineColor =
+              workout.workoutIsOnline ? Colors.green[500] : Colors.grey[200];
 
-  SimpleSplashScreen(this._imageUrl);
-
-//'assets/ ma_repo/logo_on_white.jpeg'
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      padding: EdgeInsets.all(100.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: <Widget>[
-          Flexible(
-              flex: 8,
-              child: CircleAvatar(
-                child: Image.asset(_imageUrl),
-                minRadius: 50,
-                maxRadius: 100,
-              )),
-          Flexible(
-            flex: 2,
-            child: Text('מתי רואים אותך?',
-                style: new TextStyle(
-                    color: Colors.black54,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20.0)),
-          ),
-          CircularProgressIndicator()
-        ],
-      ),
-    );
-  }
-}
-
-class AfterSplash extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-          title: new Text("Welcome In SplashScreen Package"),
-          automaticallyImplyLeading: false),
-      body: new Center(child: new Text("BODY BODY BOOM")),
-    );
+          return ListTile(
+            leading: CircleAvatar(
+              backgroundImage: NetworkImage(workout.coachImage),
+            ),
+            title: Text(workout.workoutName),
+            subtitle: Text(workout.workoutTime),
+            trailing: Icon(Icons.movie_creation, color: iconOnlineColor),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  new MaterialPageRoute(
+                      builder: (context) => WorkoutDetails(workout)));
+            },
+          );
+        });
   }
 }
