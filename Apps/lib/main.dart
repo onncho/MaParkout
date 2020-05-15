@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:MaParkOut/data/WorkoutDetails.dart';
 import 'package:MaParkOut/data/WorkoutState.dart';
 import 'package:MaParkOut/data/workout.dart';
 import 'package:flutter/material.dart';
@@ -33,6 +34,8 @@ class WorkoutAppState extends State<WorkoutApp> {
 
   List<Workout> _allWorkouts = new List<Workout>();
 
+  String _logo = 'assets/ ma_repo/logo_on_white.jpeg';
+
   Future<List<Workout>> fetchWorkouts() async {
     var url =
         'https://raw.githubusercontent.com/onncho/MaParkout/master/Apps/lib/data/workout.json';
@@ -49,15 +52,15 @@ class WorkoutAppState extends State<WorkoutApp> {
     return workouts;
   }
 
-  @override
-  void initState() {
-    fetchWorkouts().then((value) {
-      setState(() {
-        _allWorkouts.addAll(value);
-      });
-    });
-    super.initState();
-  }
+  // @override
+  // void initState() {
+  //   fetchWorkouts().then((value) {
+  //     setState(() {
+  //       _allWorkouts.addAll(value);
+  //     });
+  //   });
+  //   super.initState();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -73,32 +76,46 @@ class WorkoutAppState extends State<WorkoutApp> {
               future: fetchWorkouts(),
               builder: (BuildContext context, AsyncSnapshot snapshot) {
                 if (snapshot.data == null) {
-                  return Container(child: CircularProgressIndicator());
+                  return Container(child: SimpleSplashScreen(_logo));
                 }
                 if (snapshot.connectionState == ConnectionState.done) {
-                  orderData(snapshot.data);
                   return new Scaffold(
                       appBar: new AppBar(
-                          title: new Text("Welcome In SplashScreen Package"),
+                          title: new Text("MA Parkout"),
                           automaticallyImplyLeading: false),
                       body: new Center(
                           child: ListView.builder(
                               itemCount: snapshot.data.length,
                               itemBuilder: (BuildContext context, int index) {
                                 var workout = snapshot.data[index];
+                                var iconOnlineColor = workout.workoutIsOnline
+                                    ? Colors.green[500]
+                                    : Colors.grey[200];
+
                                 return ListTile(
-                                    leading: CircleAvatar(
-                                      backgroundImage:
-                                          NetworkImage(workout.coachImage),
-                                    ),
-                                    title: Text(workout.workoutName));
+                                  leading: CircleAvatar(
+                                    backgroundImage:
+                                        NetworkImage(workout.coachImage),
+                                  ),
+                                  title: Text(workout.workoutName),
+                                  subtitle: Text(workout.workoutTime),
+                                  trailing: Icon(Icons.movie_creation,
+                                      color: iconOnlineColor),
+                                  onTap: () {
+                                    Navigator.push(
+                                        context,
+                                        new MaterialPageRoute(
+                                            builder: (context) =>
+                                                WorkoutDetails(workout)));
+                                  },
+                                );
                               })));
                 } else if (snapshot.hasError) {
                   return Text("${snapshot.error}");
                 }
 
                 // By default, show a loading spinner.
-                return CircularProgressIndicator();
+                return SimpleSplashScreen(_logo);
               }),
         ));
 
@@ -117,9 +134,42 @@ class WorkoutAppState extends State<WorkoutApp> {
     //       loaderColor: Colors.black),
     // );
   }
+}
 
-  void orderData(json) {
-    var asd = 'askdnasd';
+class SimpleSplashScreen extends StatelessWidget {
+  final String _imageUrl;
+
+  SimpleSplashScreen(this._imageUrl);
+
+//'assets/ ma_repo/logo_on_white.jpeg'
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.white,
+      padding: EdgeInsets.all(100.0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Flexible(
+              flex: 8,
+              child: CircleAvatar(
+                child: Image.asset(_imageUrl),
+                minRadius: 50,
+                maxRadius: 100,
+              )),
+          Flexible(
+            flex: 2,
+            child: Text('מתי רואים אותך?',
+                style: new TextStyle(
+                    color: Colors.black54,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20.0)),
+          ),
+          CircularProgressIndicator()
+        ],
+      ),
+    );
   }
 }
 

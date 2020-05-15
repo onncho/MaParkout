@@ -12,6 +12,7 @@ class Workout {
   String workoutTime; // "09:30",
   String workoutColor; //"light blue"
   String coachImage;
+  String workoutDayOfTheWeek;
 
   Workout(
       {this.workoutId,
@@ -24,11 +25,12 @@ class Workout {
       this.workoutLocation,
       this.workoutTime,
       this.workoutColor,
-      this.coachImage});
+      this.coachImage,
+      this.workoutDayOfTheWeek});
 
   @override
   String toString() {
-    return '{ ${this.workoutId}, ${this.workoutCoach}, ${this.workoutDurationTime}, ${this.workoutIcon}, ${this.workoutIsOnline}, ${this.workoutLocation}, ${this.workoutName}, ${this.workoutTime}, ${this.workoutColor}, ${this.coachImage} }';
+    return '{ ${this.workoutId}, ${this.workoutCoach}, ${this.workoutDurationTime}, ${this.workoutIcon}, ${this.workoutIsOnline}, ${this.workoutLocation}, ${this.workoutName}, ${this.workoutTime}, ${this.workoutColor}, ${this.coachImage} }, ${this.workoutDayOfTheWeek}';
   }
 
   factory Workout.fromJson(Map<String, dynamic> json) {
@@ -43,6 +45,7 @@ class Workout {
         workoutLocation: json['workoutLocation'] as String,
         workoutTime: json['workoutTime'] as String,
         workoutColor: json['workoutColor'] as String,
-        coachImage: json['coachImage'] as String);
+        coachImage: json['coachImage'] as String,
+        workoutDayOfTheWeek: json['workoutDayOfTheWeek'] as String);
   }
 }
