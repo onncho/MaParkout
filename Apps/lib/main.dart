@@ -32,8 +32,6 @@ class WorkoutApp extends StatefulWidget {
 class WorkoutAppState extends State<WorkoutApp> {
   // This widget is the root of your application.
 
-  List<Workout> _allWorkouts = new List<Workout>();
-
   String _logo = 'assets/ ma_repo/logo_on_white.jpeg';
 
   Future<List<Workout>> fetchWorkouts() async {

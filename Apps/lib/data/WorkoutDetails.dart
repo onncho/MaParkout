@@ -1,6 +1,7 @@
 import 'package:MaParkOut/data/workout.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class WorkoutDetails extends StatelessWidget {
   final Workout _workout;
@@ -105,12 +106,18 @@ class WorkoutDetails extends StatelessWidget {
                         children: [
                           Container(child: Text('מיקום')),
                           Container(
-                              child: GestureDetector(
-                                  child: Text('${_workout.workoutLocation}',
+                              child: InkWell(
+                                  highlightColor: Colors.blue,
+                                  child: Text("מפה",
                                       style: TextStyle(
                                           decoration: TextDecoration.underline,
                                           color: Colors.blue)),
-                                  onTap: () {}))
+                                  onTap: () async {
+                                    if (await canLaunch(
+                                        _workout.workoutLocation)) {
+                                      await launch(_workout.workoutLocation);
+                                    }
+                                  }))
                         ]),
                   ),
                   Flexible(
