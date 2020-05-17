@@ -3,25 +3,27 @@ import 'package:MaParkOut/data/WorkoutDetails.dart';
 import 'package:MaParkOut/data/WorkoutState.dart';
 import 'package:MaParkOut/data/workout.dart';
 import 'package:MaParkOut/widgets/SimpleSplashScreen.dart';
+import 'package:MaParkOut/widgets/WorkoutCalander.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:provider/provider.dart';
 import 'package:MaParkOut/data/MyStateScheduler.dart';
 import 'package:http/http.dart' as http;
 import 'dart:async';
 
 void main() {
-  runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (context) => MyStateScheduler()),
-        ChangeNotifierProvider(
-          create: (context) => WorkoutState(),
-        )
-        // Provider(create: (context) => MyStateScheduler()),
-      ],
-      child: WorkoutApp(),
-    ),
-  );
+  initializeDateFormatting().then((_) => runApp(
+        MultiProvider(
+          providers: [
+            ChangeNotifierProvider(create: (context) => MyStateScheduler()),
+            ChangeNotifierProvider(
+              create: (context) => WorkoutState(),
+            )
+            // Provider(create: (context) => MyStateScheduler()),
+          ],
+          child: WorkoutApp(),
+        ),
+      ));
 }
 
 class WorkoutApp extends StatefulWidget {
@@ -71,7 +73,8 @@ class WorkoutAppState extends State<WorkoutApp> {
                       appBar: new AppBar(
                           title: new Text("MA Parkout"),
                           automaticallyImplyLeading: false),
-                      body: new Center(child: darwFirstList(snapshot)));
+                      body: WorkoutCalander());
+                  // body: new Center(child: darwFirstList(snapshot)));
                 } else if (snapshot.hasError) {
                   return Text("${snapshot.error}");
                 }
