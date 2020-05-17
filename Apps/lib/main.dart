@@ -34,7 +34,7 @@ class WorkoutApp extends StatefulWidget {
 class WorkoutAppState extends State<WorkoutApp> {
   // This widget is the root of your application.
 
-  String _logo = 'assets/ ma_repo/logo_on_white.jpeg';
+  String _logo = 'assets/ma_repo/logo_on_white.jpeg';
 
   Future<List<Workout>> fetchWorkouts() async {
     var url =
@@ -61,27 +61,29 @@ class WorkoutAppState extends State<WorkoutApp> {
           primarySwatch: Colors.yellow,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
-        home: Center(
-          child: FutureBuilder(
-              future: fetchWorkouts(),
-              builder: (BuildContext context, AsyncSnapshot snapshot) {
-                if (snapshot.data == null) {
-                  return Container(child: SimpleSplashScreen(_logo));
-                }
-                if (snapshot.connectionState == ConnectionState.done) {
-                  return new Scaffold(
-                      appBar: new AppBar(
-                          title: new Text("MA Parkout"),
-                          automaticallyImplyLeading: false),
-                      body: WorkoutCalander());
-                  // body: new Center(child: darwFirstList(snapshot)));
-                } else if (snapshot.hasError) {
-                  return Text("${snapshot.error}");
-                }
+        home: SafeArea(
+          child: Container(
+            child: FutureBuilder(
+                future: fetchWorkouts(),
+                builder: (BuildContext context, AsyncSnapshot snapshot) {
+                  if (snapshot.data == null) {
+                    return Container(child: SimpleSplashScreen(_logo));
+                  }
+                  if (snapshot.connectionState == ConnectionState.done) {
+                    return new Scaffold(
+                        appBar: new AppBar(
+                            title: new Text("MA Parkout"),
+                            automaticallyImplyLeading: false),
+                        body: WorkoutCalander());
+                    // body: new Center(child: darwFirstList(snapshot)));
+                  } else if (snapshot.hasError) {
+                    return Text("${snapshot.error}");
+                  }
 
-                // By default, show a loading spinner.
-                return SimpleSplashScreen(_logo);
-              }),
+                  // By default, show a loading spinner.
+                  return SimpleSplashScreen(_logo);
+                }),
+          ),
         ));
   }
 

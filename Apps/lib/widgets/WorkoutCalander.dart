@@ -105,9 +105,11 @@ class _WorkoutCalander extends State<WorkoutCalander>
       //-----------------------
       //_buildTableCalendar(),
       _buildTableCalendarWithBuilders(),
-      const SizedBox(height: 8.0),
+      // const SizedBox(height: 8.0),
       // _buildButtons(),
+      const SizedBox(height: 8.0),
 
+      Image.asset('assets/ma_repo/cover/Cover_01.jpg'),
       const SizedBox(height: 8.0),
       Expanded(child: _buildEventList()),
     ]);
@@ -118,6 +120,7 @@ class _WorkoutCalander extends State<WorkoutCalander>
       calendarController: _calendarController,
       events: _events,
       holidays: _holidays,
+      initialCalendarFormat: CalendarFormat.week,
       startingDayOfWeek: StartingDayOfWeek.sunday,
       calendarStyle: CalendarStyle(
         selectedColor: Colors.deepOrange[400],
